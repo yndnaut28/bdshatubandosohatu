@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bản đồ số phường Hà Tu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image.png" href="/logo/logo.png">
+</head>
+<body>
+    <header>
+        <div id = "logo">
+            <div id="anhlogodoan"><img src="/logo/logo.png" width=70px"></div>
+        </div>
+        <div id = "ntlg">
+            <div id = "nametag">
+                <p>MẶT TRẬN TỔ QUỐC PHƯỜNG HÀ TU</p>
+                <h1>Bản đồ số phường Hà Tu</h1>
+            </div>
+            <div id ="imglogo">
+                <img src="/logo/Biểu ngữ.png" alt="doan">
+            </div>
+        </div>
+    </header>
+
+    <section class="video-section">
+        <div class="video-player-container">
+            <iframe 
+                src="https://www.youtube.com/embed/7EhryrTi9DI?si=eSDo29VH4VkjVfVg&autoplay=1&mute=1" 
+                title="Quảng Ninh" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Tìm theo tên/địa chỉ...">
+        <div class="custom-select" id="filterSelect">
+            <div class="selected">Tất cả</div>
+            <div class="options">
+                <div data-value="all">Tất cả</div>
+                <div data-value="hanhchinh">Hành chính</div>
+                <div data-value="yte">Y tế</div>
+                <div data-value="muasam">Mua sắm, chợ</div>
+                <div data-value="nganhang">Ngân hàng</div>
+                <div data-value="amthuc">Ẩm thực</div>
+                <div data-value="bia">Quán bia</div>
+                <div data-value="thethao">Thể thao</div>
+                <div data-value="truonghoc">Trường học</div>
+                <div data-value="doanhnghiep">Doanh nghiệp</div>
+                <div data-value="tamlinhvanhoa">Tâm linh - Văn hóa</div>
+                <div data-value="nhavanhoa">Nhà văn hóa</div>
+            </div>
+        </div>    
+    </div>
+
+    <div class="card-container">
+        <!-- Hành chính -->
+        <div class="card" data-type="hanhchinh" data-keywords="Ủy ban nhân dân ubnd">
+            <div class="card-img">
+                <img src="/img/1. HÀNH CHÍNH/1. Trụ sở Đảng ủy - HĐND- UBND/130c5518-38b9-4e35-8245-e7d168068e39.jpg">
+                <img src="/img/1. HÀNH CHÍNH/1. Trụ sở Đảng ủy - HĐND- UBND/1e6baa5c-127b-4668-9914-a1b9a2bb7e9b.jpg">
+                <img src="/img/1. HÀNH CHÍNH/1. Trụ sở Đảng ủy - HĐND- UBND/c78c50aa-afd3-43b9-ac4c-c98ef8555fab.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Trụ sở Đảng uỷ - HĐND - UBND</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/zoMZ8sw76SuCHb9fA" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="hanhchinh" data-keywords="Uỷ ủy ban mặt trận tổ quốc ">
+            <div class="card-img">
+                <img src="/img/1. HÀNH CHÍNH/2. Trụ sở UB MTTQ/481a4700-1a9b-45ba-a674-b63e60ad555c.jpg">
+                <img src="/img/1. HÀNH CHÍNH/2. Trụ sở UB MTTQ/c3f0c1e2-faff-4bc1-9dbe-7dd5d848fbb6.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Trụ sở Ủy ban MTTQ phường</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/SLKPifCD9fm5Ld3r7" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>  
+        <div class="card" data-type="hanhchinh">
+            <div class="card-img">
+                <img src="/img/1. HÀNH CHÍNH/3. Ban CHQS phường/5bfdbbd1-645f-4b06-9fe4-1bbe18990a7f.jpg">
+                <img src="/img/1. HÀNH CHÍNH/3. Ban CHQS phường/87d1eed7-4f9d-48d1-b6ff-f2355a319e42.jpg">
+                <img src="/img/1. HÀNH CHÍNH/3. Ban CHQS phường/a16818ad-50d5-447b-908f-77c495c85532.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Ban Chỉ huy Quân sự phường</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/WVSHwz8h1R5yMFbp6" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="hanhchinh">
+            <div class="card-img">
+                <img src="/img/1. HÀNH CHÍNH/4. Trung tâm cung ứng dịch vụ/26714482-13c2-42f3-9a0d-53289ef9a32c.jpg">
+                <img src="img/1. HÀNH CHÍNH/4. Trung tâm cung ứng dịch vụ/3d3bf719-008e-48af-b7f3-3a61006c407a.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Trung tâm cung ứng dịch vụ phường</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/p63kcg81NtpQ31RW6" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="hanhchinh">
+            <div class="card-img">
+                <img src="/img/1. HÀNH CHÍNH/5. Bưu điện/1c5aedf9-8faa-40c2-9c4e-f674a4c9c4eb.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Bưu điện</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/KNJSEFwzos5gYGmH8" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="hanhchinh">
+            <div class="card-img">
+                <img src="/img/1. HÀNH CHÍNH/6. công an phường/b6062f58-7a44-4fd1-8214-8eecae356715.jpg">
+                <img src="/img/1. HÀNH CHÍNH/6. công an phường/efb17c2b-468a-4fe7-a2ec-2954d8bcc196.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Công an phường</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/3N9BWyVQrnrc2C9MA" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <!-- y tế -->
+        <div class="card" data-type="yte">
+            <div class="card-img">
+                <img src="img/2. Y TẾ/8. Trung tâm y tế/e771388b-ecfa-4f0e-8964-fcc527c57e33.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Trạm y tế phường</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/gXLoW1prsubEKsBW8" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+       <!-- Mua sắm -->
+        <div class="card" data-type="muasam">
+            <div class="card-img">
+                <img src="img/3. MUA SẮM/9. MM mega/8869ee63-09b9-4fe1-9c79-9cce9b5bf398.jpg">
+                <img src="img/3. MUA SẮM/9. MM mega/a8e85084-5467-4223-acfd-11839b11dcd1.jpg">
+                <img src="img/3. MUA SẮM/9. MM mega/cbe798b2-af12-4982-a8ef-11113bf03836.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Trung tâm MM Mega Market Hà Tu</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/3maB8F4dBgNUzJgj9" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="muasam">
+            <div class="card-img">
+                <img src="img/3. MUA SẮM/10. Chợ HP/1c1d6dd6-42c4-4587-8cbb-88209c25a8d3.jpg">
+                <img src="img/3. MUA SẮM/10. Chợ HP/1d03603b-a16e-40aa-947a-d4114173e93f.jpg">
+                <img src="img/3. MUA SẮM/10. Chợ HP/5483ad9b-5022-4c80-a11b-9c0a8fd3d721.jpg">
+                <img src="img/3. MUA SẮM/10. Chợ HP/6d9938bf-7283-4bd8-aca8-92a0e6683f40.jpg">
+                <img src="img/3. MUA SẮM/10. Chợ HP/8ae22211-8503-4374-8d9e-ad344b12504a.jpg">
+                <img src="img/3. MUA SẮM/10. Chợ HP/b9a52da5-8f7b-4439-b92d-cc8b329458c6.jpg">
+                <img src="img/3. MUA SẮM/10. Chợ HP/e3ee1605-29fc-4b27-ade7-efc38d5567ad.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Chợ Hà Phong</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/gbTEjq4fuzLU1oHv6" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="muasam">
+            <div class="card-img">
+                <img src="img/3. MUA SẮM/11. Chợ HT/018181ec-917c-46ba-8579-7d1954097f92.jpg">
+                <img src="img/3. MUA SẮM/11. Chợ HT/8d4c8663-2503-443d-be27-ff729f1cb5ef.jpg">
+                <img src="img/3. MUA SẮM/11. Chợ HT/a264ecfd-1ae5-488e-9464-6a7d86c88c5b.jpg">
+                <img src="img/3. MUA SẮM/11. Chợ HT/d78b2ab5-673b-49d7-84c8-2f56bf08d868.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Chợ Hà Tu</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/im9owe3jgVdpP3597" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <!-- Ngân hàng -->
+         <div class="card" data-type="nganhang">
+            <div class="card-img">
+                <img src="img/4. NGÂN HÀNG/12. Ngân Hàng/3403efa0-73e0-414f-a94e-8bfd4962ecf3.jpg">
+                <img src="img/4. NGÂN HÀNG/12. Ngân Hàng/6644268998940.jpg">
+                <img src="img/4. NGÂN HÀNG/12. Ngân Hàng/vietinbank.webp">
+            </div>
+            <div class="card-text">
+                <h3>Ngân hàng Vietinbank</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/VU5aRf6Fck6KUDFr8" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <!-- Ẩm thực -->
+         <div class="card" data-type="amthuc">
+            <div class="card-img">
+                <img src="img/5. ĂN UỐNG/13. nhà hàng minh thanh/31c93b03-28c6-4781-b317-da291fc64a72.jpg">
+                <img src="img/5. ĂN UỐNG/13. nhà hàng minh thanh/5b050b5c-baea-477d-b744-7dc33192e746.jpg">
+                <img src="img/5. ĂN UỐNG/13. nhà hàng minh thanh/6d5496c1-5acf-44dd-8630-d5959578ea1f.jpg">
+                <img src="img/5. ĂN UỐNG/13. nhà hàng minh thanh/a1f94feb-8023-4062-9f0d-a5daf415930d.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Nhà Hàng Minh Thanh</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/U1KYvY7ea6pAoGFB8" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="amthuc">
+            <div class="card-img">
+                <img src="img/5. ĂN UỐNG/14. ven đô/0bfa0502-4e93-42ef-9920-2ca1cbfd0d23.jpg">
+                <img src="img/5. ĂN UỐNG/14. ven đô/1.jpg">
+                <img src="img/5. ĂN UỐNG/14. ven đô/36d66fcb-41e2-4d16-b33c-b8cce5a1b58a.jpg">
+                <img src="img/5. ĂN UỐNG/14. ven đô/48180c79-cbfe-441f-a8d9-74fcc90db400.jpg">
+                <img src="img/5. ĂN UỐNG/14. ven đô/66e371f8-728b-4de6-a5f6-cadf28857302.jpg">
+                <img src="img/5. ĂN UỐNG/14. ven đô/73d1812c-cb7b-444c-9a60-9fc79a6359d7.jpg">
+                <img src="img/5. ĂN UỐNG/14. ven đô/a6bda711-103c-4952-8550-6533d8807530.jpg">
+                <img src="img/5. ĂN UỐNG/14. ven đô/b45e1860-6ad5-4ecd-8cf5-cbcdd9f80ced.jpg">
+                <img src="img/5. ĂN UỐNG/14. ven đô/d39dfcb0-3d14-4cfe-be41-97ca321b6860.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Nhà Hàng Ven Đô cái Xà Cong</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/EqfMzDktGAeic9fg9" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="amthuc bia">
+            <div class="card-img">
+                <img src="img/5. ĂN UỐNG/16. cây bàng/z7720782764667_68109f3610dc4ec6764371884419b1bf.jpg">
+                <img src="img/5. ĂN UỐNG/16. cây bàng/4f20ef17-7c54-4b90-9a4b-91f2322df703.jpg">
+                <img src="img/5. ĂN UỐNG/16. cây bàng/5e288fd1-a5d9-49b1-9231-681720c6fe2e.jpg">
+                <img src="img/5. ĂN UỐNG/16. cây bàng/62f3c132-721b-4e6f-9772-a40488acc16b.jpg">
+                <img src="img/5. ĂN UỐNG/16. cây bàng/8aa9b1f6-e3de-4f92-9226-4ebdb23eae8d.jpg">
+                <img src="img/5. ĂN UỐNG/16. cây bàng/e691f712-41ae-4ad5-84ca-f318355d6d8d.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Quán bia Cây Bàng</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/4AZArhDxzbfGEd4T9" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="amthuc bia">
+            <div class="card-img">
+                <img src="img/5. ĂN UỐNG/17. cây xanh/279b0d0a-c3e1-4405-a9e4-260ad97022bd.jpg">
+                <img src="img/5. ĂN UỐNG/17. cây xanh/6aa15d51-bb20-47c4-ae64-891feb9077b4.jpg">
+                <img src="img/5. ĂN UỐNG/17. cây xanh/8534fa72-6c85-4837-908b-6beb9e89bbc3.jpg">
+                <img src="img/5. ĂN UỐNG/17. cây xanh/8a632f18-5a3b-4dd3-aa97-5bdaa1f97dfc.jpg">
+                <img src="img/5. ĂN UỐNG/17. cây xanh/8be14257-d63d-4e64-8897-920298784141.jpg">
+                <img src="img/5. ĂN UỐNG/17. cây xanh/cf5a7ad7-ef7f-493b-b812-a967324033f2.jpg">
+                <img src="img/5. ĂN UỐNG/17. cây xanh/daea54db-26f4-4e16-91fe-3f1e6eec59ca.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Quán bia Cây Xanh</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/u6W3HVM6ndJbxdw56" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="amthuc bia">
+            <div class="card-img">
+                <img src="img/5. ĂN UỐNG/18. ruốc công tráng/127639078_188869322849860_8714854410463988008_n.jpg">
+                <img src="img/5. ĂN UỐNG/18. ruốc công tráng/128046079_194140458989413_5553944523281157643_n.jpg">
+                <img src="img/5. ĂN UỐNG/18. ruốc công tráng/128592039_194140508989408_6345100798062109866_n.jpg">
+                <img src="img/5. ĂN UỐNG/18. ruốc công tráng/128808156_194140532322739_2622180927701395786_n.jpg">
+                <img src="img/5. ĂN UỐNG/18. ruốc công tráng/130030547_194140475656078_9084102968404260872_n.jpg">
+                <img src="img/5. ĂN UỐNG/18. ruốc công tráng/471971949_1209446743947058_879262172387930996_n.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Quán bia Ruốc Công Tráng</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/AwsCfKYmGHR4B7VN7" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="amthuc bia">
+            <div class="card-img">
+                <img src="img/5. ĂN UỐNG/21. quán bia điều chinh/94250959_2629790670600998_4304754950941966336_n.jpg">
+                <img src="img/5. ĂN UỐNG/21. quán bia điều chinh/94368668_2629790617267670_6473841146274512896_n.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Quán bia Điều Chinh</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/5nZA42ycWeT1vS8G7" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="amthuc">
+            <div class="card-img">
+                <img src="img/5. ĂN UỐNG/20. lò bánh mỳ mỏ/62265ea7-f7d8-4f60-95ef-bb8c7abf7d85.jpg">
+                <img src="img/5. ĂN UỐNG/20. lò bánh mỳ mỏ/f2679f8e-c34b-4b52-b7ba-6d717ba202b1.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Lò Bánh Mỳ Mỏ Hạ Long</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/cwFJkFYQHjPhy4Ns5" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="amthuc">
+            <div class="card-img">
+                <img src="img/5. ĂN UỐNG/24. đa năng/00c06742-5d41-4473-a359-8534f99f6d2a.jpg">
+                <img src="img/5. ĂN UỐNG/24. đa năng/ed462f43-8bf6-4d1f-82a8-7e1811ec4667.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Trung tâm tiệc cưới Nhà hàng Đa Năng</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/fucfriscXC2dfrmq6" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="amthuc">
+            <div class="card-img">
+                <img src="img/5. ĂN UỐNG/25. hải đăng/13a1f0bf-6aa2-4b39-a4ea-0fc7a029bf54.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Nhà Hàng Hải Đăng</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/Pxn1hgXDEkFzjiCz5" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="amthuc">
+            <div class="card-img">
+                <img src="img/5. ĂN UỐNG/47. Sữa chua đường tàu/4ba077dd-cffe-4de4-93cc-ad6258125286.jpg">
+                <img src="img/5. ĂN UỐNG/47. Sữa chua đường tàu/5bea4867-afb5-4cbd-9d32-e64384798446.jpg">
+                <img src="img/5. ĂN UỐNG/47. Sữa chua đường tàu/b0199974-bee7-47cb-92d9-776a8b3d254a.jpg">
+                <img src="img/5. ĂN UỐNG/47. Sữa chua đường tàu/ed891580-c8d7-4b07-9274-d2f484c44143.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Sữa chua đường tàu</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/B4czPwwL4grmKS8n7" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <!-- Thể thao -->
+         <div class="card" data-type="thethao">
+            <div class="card-img">
+                <img src="img/6. THỂ THAO/27. sân bóng cty than hà tu/3d930705-aebd-4567-ba87-95f96497d4ce.jpg">
+                <img src="img/6. THỂ THAO/27. sân bóng cty than hà tu/71884ea6-02ce-4676-ae5b-48cf916602d1.jpg">
+                <img src="img/6. THỂ THAO/27. sân bóng cty than hà tu/fbe513f6-2b61-41ed-bb80-e0c7873f0d94.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Sân vận động CTCP than Hà Tu</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/Q7jFMTvxGS9ufZ8CA" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="thethao">
+            <div class="card-img">
+                <img src="img/6. THỂ THAO/28. sân công viên hoàng tử/49f525fc-05a6-49d2-aad2-c313d316f443.jpg">
+                <img src="img/6. THỂ THAO/28. sân công viên hoàng tử/54146bb5-5564-4d0d-aefd-bfea6acaa1fa.jpg">
+                <img src="img/6. THỂ THAO/28. sân công viên hoàng tử/ef029a5e-fdf7-44c8-9f45-2e19e480256f.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Sân bóng đá cỏ nhân tạo Công viên các hoàng tử</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/d8dNKgZdRzUhzvmcA" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="thethao">
+            <div class="card-img">
+                <img src="img/6. THỂ THAO/29. sân pic hà tu/be585a54-a5fa-4a5d-9eef-a74dbb85c326.jpg">
+                <img src="img/6. THỂ THAO/29. sân pic hà tu/c359b7f9-9fd0-44bf-8bab-1f80424934d1.jpg">
+                <img src="img/6. THỂ THAO/29. sân pic hà tu/f61ce074-60d0-4c8a-b644-05a952fa6b09.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Sân Pickleball Hà Tu</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/86qX8jL1n47fYmhE6" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="thethao">
+            <div class="card-img">
+                <img src="img/6. THỂ THAO/30. sân pic t80/597658442_122147103836941819_8283970858515877790_n.jpg">
+                <img src="img/6. THỂ THAO/30. sân pic t80/605541423_3884667891832270_6848711750276564757_n.jpg">
+                <img src="img/6. THỂ THAO/30. sân pic t80/622320543_122157091658941819_9135211005617724390_n.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Sân Pickleball T80</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/tSiH9pWCPRRLBeBH7" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="thethao">
+            <div class="card-img">
+                <img src="img/6. THỂ THAO/31. nhà thi đấu cty than hà tu/1172f42e-e764-4d0b-a817-4eaf83b029d4.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Nhà thi đấu công ty cổ phần than Hà Tu</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/dGNbN8p4w8p8y1Su5" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="thethao">
+            <div class="card-img">
+                <img src="img/6. THỂ THAO/53. An fitness/471278389_122154196640288196_1101940883464555966_n.jpg">
+                <img src="img/6. THỂ THAO/53. An fitness/471489424_122153765666288196_4456966117710321137_n.jpg">
+                <img src="img/6. THỂ THAO/53. An fitness/unnamed.jpg">
+            </div>
+            <div class="card-text">
+                <h3>An Fitness </h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/4e8iZjBF3HVxGNBi6" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="thethao">
+            <div class="card-img">
+                <img src="img/6. THỂ THAO/54. bể bơi Hải Quân/21212.jpg">
+                <img src="img/6. THỂ THAO/54. bể bơi Hải Quân/a80000bc-8cfa-420f-a22f-15c7182d3599.jpg">
+                <img src="img/6. THỂ THAO/54. bể bơi Hải Quân/c8084a0c-90f3-4eba-9379-9ec5938f6f5a.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Bể bơi Hải Quân</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/Dek3L6GnzhRFW6Fa7" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+       <!-- Trường học <TH & THCS & THPT -->
+        <div class="card" data-type="truonghoc">
+            <div class="card-img">
+                <img src="/img/7. GIÁO DỤC/36. mầm non HT 1/9668cab5-213d-4e69-93b9-24e544c6032a.jpg">
+                <img src="/img/7. GIÁO DỤC/36. mầm non HT 1/ef0bc0d1-9c57-4d92-a44c-773711cd3178.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Trường Mầm non Hà Tu cơ sở 1</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/ENRt2rvbzm5TSE6a9" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="truonghoc">
+            <div class="card-img">
+                <img src="/img/7. GIÁO DỤC/38. MN Hà Tu 2/71447042-7d6d-47e6-acd8-92aec55b5c38.jpg">
+                <img src="/img/7. GIÁO DỤC/38. MN Hà Tu 2/8be3172a-2568-479c-8ea7-cb48931c3d73.jpg">
+                <img src="/img/7. GIÁO DỤC/38. MN Hà Tu 2/z7720765002681_5c79fb85752084dddde534b79c97e0d1.jpg">
+                <img src="/img/7. GIÁO DỤC/38. MN Hà Tu 2/z7720765423627_c4f9baff2b827d3948425ab95eb586ad.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Trường Mầm non Hà Tu cơ sở 2</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/vL1bGtVEF9xRUc4PA" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="truonghoc">
+            <div class="card-img">
+                <img src="/img/7. GIÁO DỤC/39. MN Hà Tu 3/49f6895f-6edf-47c3-977f-01e3f144e2c3.jpg">
+                <img src="/img/7. GIÁO DỤC/39. MN Hà Tu 3/b9d96cec-a5ae-4834-aec6-9e7b3841bd5e.jpg">
+                <img src="/img/7. GIÁO DỤC/39. MN Hà Tu 3/c09d51ed-036d-4f0a-b0af-728441510fc1.jpg">
+                <img src="/img/7. GIÁO DỤC/39. MN Hà Tu 3/d2448d67-e54d-479c-8344-2fc8cac77ead.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Trường Mầm non Hà Tu cơ sở 3</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/JhuLpccN7Pu2ggfn7" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="truonghoc">
+            <div class="card-img">
+                <img src="/img/7. GIÁO DỤC/37. MN Hà Tu 4/03b0ceba-0e4f-4c2e-87a2-a08b035b2898.jpg">
+                <img src="/img/7. GIÁO DỤC/37. MN Hà Tu 4/3743f34a-e508-4cd0-8638-fbfced303688.jpg">
+                <img src="/img/7. GIÁO DỤC/37. MN Hà Tu 4/ac3b3b99-6f5e-4cc6-8e14-539617901c77.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Trường Mầm non Hà Tu cơ sở 4</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/EewNWR9hnPkBUmscA" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="truonghoc" data-keywords="Tiểu học Cấp 1 THCS Cấp 2 Trung học cơ sở">
+            <div class="card-img">
+                <img src="/img/7. GIÁO DỤC/33. THvTHCS HT cs 1/467401487_1087650643038640_3352704668255661180_n.jpg">
+                <img src="/img/7. GIÁO DỤC/33. THvTHCS HT cs 1/492026894_1230675999059458_4222397746013426915_n.jpg">
+                <img src="/img/7. GIÁO DỤC/33. THvTHCS HT cs 1/4e9af26e-55d3-4cc9-bd70-d34bd905da4c.jpg">
+                <img src="/img/7. GIÁO DỤC/33. THvTHCS HT cs 1/565084218_1397250665735323_9153927738992571622_n.jpg">
+                <img src="/img/7. GIÁO DỤC/33. THvTHCS HT cs 1/662610834_1656001985959712_3080580013589729583_n.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Trường TH&THCS Hà Tu cơ sở 1</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/TwiV6piWLuALk4HCA" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="truonghoc" data-keywords="Tiểu học Cấp 1 THCS Cấp 2 Trung học cơ sở">
+            <div class="card-img">
+                <img src="/img/7. GIÁO DỤC/34. THvTHCS HT cs 2/644565849_1624941279065783_3164034082816641147_n.jpg">
+                <img src="/img/7. GIÁO DỤC/34. THvTHCS HT cs 2/653457808_1639786020914642_2995105609494056431_n.jpg">
+                <img src="/img/7. GIÁO DỤC/34. THvTHCS HT cs 2/658169187_1650134429879801_3067527902619019137_n.jpg">
+                <img src="/img/7. GIÁO DỤC/34. THvTHCS HT cs 2/ee4b8c69-6c2d-43b3-9965-fd08851bffb3.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Trường TH&THCS Hà Tu cơ sở 2</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/ZVqdJ1SPyKSg95jA7" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="truonghoc" data-keywords="Tiểu học Cấp 1 THCS Cấp 2 Trung học cơ sở">
+            <div class="card-img">
+                <img src="/img/7. GIÁO DỤC/35. THvTHCS HT cs 3/540983229_1233374591921296_3623719711914924351_n.jpg">
+                <img src="/img/7. GIÁO DỤC/35. THvTHCS HT cs 3/565738284_1278860644039357_8404595595518987858_n.jpg">
+                <img src="/img/7. GIÁO DỤC/35. THvTHCS HT cs 3/569044829_1278860437372711_7099756674028377653_n.jpg">
+                <img src="/img/7. GIÁO DỤC/35. THvTHCS HT cs 3/8935b641-1e61-4923-a73a-8be27de3faf7.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Trường TH&THCS Hà Tu cơ sở 3</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/CN8CF8Bbh6vQpTBU8" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="truonghoc" data-keywords="THPT thpt Cấp 3 Trung học phổ thông">
+            <div class="card-img">
+                <img src="/img/7. GIÁO DỤC/32. Trường VVH/358ea86a-5a49-4aff-be71-615b44df29c5.jpg">
+                <img src="/img/7. GIÁO DỤC/32. Trường VVH/7d86cc57-60a2-4764-a6a2-2d15435019bb.jpg">
+                <img src="/img/7. GIÁO DỤC/32. Trường VVH/ae500910-70c6-477a-a84a-5b399d78b900.jpg">
+                <img src="/img/7. GIÁO DỤC/32. Trường VVH/f6b9493f-3213-4543-b2be-fe1b3a0589d1.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Trường THPT Vũ Văn Hiếu</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/bnVxGGd9Qa4c3mSh7" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <!-- Doanh nghiệp -->
+        <div class="card" data-type="doanhnghiep">
+            <div class="card-img">
+                <img src="img/9. DOANH NGHIỆP/50. trung tâm cấp cứu mỏ/0de550ec-9f39-4861-837b-9c1284981cda.jpg">
+                <img src="img/9. DOANH NGHIỆP/50. trung tâm cấp cứu mỏ/123d9d8e-68d7-4fe9-89a5-ec8ba8a227c8.jpg">
+                <img src="img/9. DOANH NGHIỆP/50. trung tâm cấp cứu mỏ/d72d1a14-4f2b-47a9-9dce-64e13a4a74e5.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Trung tâm cấp cứu mỏ - Vinacomin</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/2r2g3Vkv4NAGpsrv9" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="doanhnghiep">
+            <div class="card-img">
+                <img src="img/9. DOANH NGHIỆP/49. Công ty than Núi béo/469844068_599825265762133_5405106793903662456_n.jpg">
+                <img src="img/9. DOANH NGHIỆP/49. Công ty than Núi béo/472042060_613021641109162_2209655018865442509_n.jpg">
+                <img src="img/9. DOANH NGHIỆP/49. Công ty than Núi béo/472198105_615175147560478_8763835583003224341_n.jpg">
+                <img src="img/9. DOANH NGHIỆP/49. Công ty than Núi béo/512768873_722776030400151_4360115011348203444_n.jpg">
+                <img src="img/9. DOANH NGHIỆP/49. Công ty than Núi béo/5438160c-8fd0-4769-a88c-8d111dfcf4c4.jpg">
+                <img src="img/9. DOANH NGHIỆP/49. Công ty than Núi béo/9c876a91-9d72-4f29-b0c8-74013d49fbb6.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Khai trường Công ty cổ phần than Núi béo - Vinacomin</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/1BZM3yQcJ5wdzN8A9" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="doanhnghiep">
+            <div class="card-img">
+                <img src="img/9. DOANH NGHIỆP/52. công ty than đông bắc/0460d43f-103d-4542-abd1-759b1cd1685c.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Công ty khai thác khoáng sản - Binh đoàn 19 tổng công ty than Đông Bắc</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/18gj5Ap5qkhiQ4WR7" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="doanhnghiep">
+            <div class="card-img">
+                <img src="img/9. DOANH NGHIỆP/48. Công ty than Hà Tu/09c62cee-ccdd-4a90-963e-9f55b6c9f574.jpg">
+                <img src="img/9. DOANH NGHIỆP/48. Công ty than Hà Tu/48ab3f75-b9c0-46aa-85f0-e8bf350d7502.jpg">
+                <img src="img/9. DOANH NGHIỆP/48. Công ty than Hà Tu/6a1fef09-8ab6-4453-b43a-d30b945b14b9.jpg">
+                <img src="img/9. DOANH NGHIỆP/48. Công ty than Hà Tu/f5841c5e-57d2-444d-baa7-8dc25c3200b6.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Công ty cổ phần than Hà Tu - Vinacomin</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/7hiQoMtdnV4ez2aNA" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="doanhnghiep">
+            <div class="card-img">
+                <img src="img/9. DOANH NGHIỆP/Công ty cổ phần đăng kiểm/1a101d8b-4c20-4bb9-805e-67a0d8225f19.jpg">
+                <img src="img/9. DOANH NGHIỆP/Công ty cổ phần đăng kiểm/4a62a087-668e-45a4-9a1d-de3b3791001f.jpg">
+                <img src="img/9. DOANH NGHIỆP/Công ty cổ phần đăng kiểm/9472f41a-68d1-4f21-b012-0db8328c0ce9.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Công ty cổ phần Đăng kiểm xe cơ giới</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/MsEuLVikFMH8SUQXA" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <!-- Tâm linh/văn hóa -->
+         <div class="card" data-type="tamlinhvanhoa">
+            <div class="card-img">
+                <img src="img/8. TÂM LINH, VĂN HÓA/40. chùa quang nghiêm/640387403_1620161499543761_1602445503621586029_n.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/40. chùa quang nghiêm/640387403_1620161499543761_1602445503621586029_n.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/40. chùa quang nghiêm/649538eb-b443-419f-9e18-4ce06f05d9c2.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/40. chùa quang nghiêm/a6d48d48-ce2c-48bc-9303-50e178664b9f.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/40. chùa quang nghiêm/b119f60a-d8e2-48e8-8522-4a5802598596.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/40. chùa quang nghiêm/b4a7f08b-bd0f-4c17-96b5-c63c985da5d8.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/40. chùa quang nghiêm/e5d81b7d-9087-46ce-b9c4-38ba03176979.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Chùa Quang Nghiêm</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/ikMxFu7AchGEnob86" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="tamlinhvanhoa">
+            <div class="card-img">
+                <img src="img/8. TÂM LINH, VĂN HÓA/41. đình lộ phong/0b19910f-a7d3-4789-9974-e79fa06ce485.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/41. đình lộ phong/5e0d6aec-d199-4562-9120-e2570118011f.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/41. đình lộ phong/61de7562-1bd1-415e-9d02-78cd32f16275.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/41. đình lộ phong/644393533_1224104913171917_1159845881948299366_n.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/41. đình lộ phong/644672260_1224104836505258_1269905164601900040_n.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/41. đình lộ phong/74caedfe-3fd9-480b-94e1-55e8f4d7298e.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/41. đình lộ phong/7729ddf1-52ad-4ed8-b17b-f975f56bca47.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/41. đình lộ phong/b5a8801e-ea81-4284-8cb9-76ed862d79b6.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/41. đình lộ phong/db70fdaa-6323-4985-9a4d-bd025196b7be.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/41. đình lộ phong/e.png">
+                <img src="img/8. TÂM LINH, VĂN HÓA/41. đình lộ phong/e032d75f-d590-4c5e-96a0-e11d6cbd5e1a.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/41. đình lộ phong/f35e0a91-93fc-45db-ae37-b6e9e1db4cc0.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Di tích lịch sư Đình Lộ Phong</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/Pawabiy9SCx7czNRA" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="tamlinhvanhoa">
+            <div class="card-img">
+                <img src="img/8. TÂM LINH, VĂN HÓA/44. nghĩa trang liệt sĩ hà tu/0f754d65-e808-494b-b984-3a40f02129ce.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/44. nghĩa trang liệt sĩ hà tu/51d33ca9-7628-4ae1-9b48-d60d8e8d8104.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/44. nghĩa trang liệt sĩ hà tu/67108478-5943-4c30-99e7-9b9b02a96ca5.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/44. nghĩa trang liệt sĩ hà tu/bc3ef71d-b6d4-46a4-a39a-b8f88492d227.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/44. nghĩa trang liệt sĩ hà tu/d67e3d4a-b2d5-4af5-b81b-1e6b541cedef.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Nghĩa Trang liệt sĩ Hà Tu</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/ZBd9u8m9xDvoFBkn6" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="tamlinhvanhoa">
+            <div class="card-img">
+                <img src="img/8. TÂM LINH, VĂN HÓA/45. nghĩa trang gốc khế hà tu/07ef6b37-426d-47e9-bd88-42c4e5702f92.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/45. nghĩa trang gốc khế hà tu/818a1cf8-45b2-4910-9222-588f9b8b6b01.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/45. nghĩa trang gốc khế hà tu/bb98d622-c5c0-4d04-85a1-7862ea5da251.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/45. nghĩa trang gốc khế hà tu/c5c7cc37-f47b-483f-af58-b45415493939.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Nghĩa Trang Gốc Khế Hà Tu</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/P93qjkwmvafpeGHQ8" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="tamlinhvanhoa">
+            <div class="card-img">
+                <img src="img/8. TÂM LINH, VĂN HÓA/45. nghĩa trang gốc khế hà tu/07ef6b37-426d-47e9-bd88-42c4e5702f92.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/45. nghĩa trang gốc khế hà tu/818a1cf8-45b2-4910-9222-588f9b8b6b01.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/45. nghĩa trang gốc khế hà tu/bb98d622-c5c0-4d04-85a1-7862ea5da251.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/45. nghĩa trang gốc khế hà tu/c5c7cc37-f47b-483f-af58-b45415493939.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Nghĩa Trang Gốc Khế Hà Tu</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/P93qjkwmvafpeGHQ8" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="tamlinhvanhoa">
+            <div class="card-img">
+                <img src="img/8. TÂM LINH, VĂN HÓA/42. nhà thờ giáo họ hà tu/661589606_938379445601885_8459481326088888628_n.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/42. nhà thờ giáo họ hà tu/662298257_938379525601877_5646100662116838805_n.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/42. nhà thờ giáo họ hà tu/662644191_938378902268606_8224972314143862363_n.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/42. nhà thờ giáo họ hà tu/666498167_938375555602274_4258919969000242910_n.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/42. nhà thờ giáo họ hà tu/724fb044-beb6-4c64-83b9-b7b58d5dadf1.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/42. nhà thờ giáo họ hà tu/8b02d685-cafd-4830-aa60-e539cdb54aee.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Nhà Thờ Giáo họ Hà Tu</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/2rmjykAX6CCmsXGdA" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="tamlinhvanhoa">
+            <div class="card-img">
+                <img src="img/8. TÂM LINH, VĂN HÓA/46. nhà văn hóa công nhân than hà tu/376548f0-ac49-4521-9d24-f1df475a4f39.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/46. nhà văn hóa công nhân than hà tu/584660be-d29a-4583-b017-1a5c70844ea9.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/46. nhà văn hóa công nhân than hà tu/75439023-c4db-4c5d-85cf-1e21c195aba8.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/46. nhà văn hóa công nhân than hà tu/de47917f-2ff2-4650-969a-d3f77963f669.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Nhà văn hóa công nhân công ty cổ phần than Hà Tu</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/LYNY8W279DeLhJUC8" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+        <div class="card" data-type="tamlinhvanhoa">
+            <div class="card-img">
+                <img src="img/8. TÂM LINH, VĂN HÓA/43. tượng đài đc Vũ Văn Hiếu/2be913f7-5326-46cd-9e73-dd9d9e072ada.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/43. tượng đài đc Vũ Văn Hiếu/3dbb29fa-7094-4f18-9fe2-857d1793e582.jpg">
+                <img src="img/8. TÂM LINH, VĂN HÓA/43. tượng đài đc Vũ Văn Hiếu/8bd4736b-83d3-4598-8c79-6a18a8294caa.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Tượng đài đồng chí Vũ Văn Hiếu</h3>
+                <p>Phường Hà Tu, Tỉnh Quảng Ninh</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/fcWrt5k1iFvKjr8JA" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div>
+            <div id = "logofooter">
+                <div id = "textlogof">
+                    <img src="/logo/logo.png" width="30px">
+                    <h3> PHƯỜNG HÀ TU</h1>
+                </div>
+                <p>Mặt trận Tổ Quốc phường Hà Tu</p>
+                <div id = "Thongtincoban">
+                    <div class="lienlac">
+                        <img src="/logo/mail.png" width="20">
+                        <strong style="font-family: Montserrat;">Gmail:</strong>mttqphuonghatu@gmail.com
+                    </div>
+                    <div class="lienlac">
+                        <img src="/logo/call.png" width="20">
+                        <strong style="font-family: Montserrat;">Hotline:</strong>090 420 3996
+                    </div>
+                </div>
+            </div>
+
+            <div id = "tonglienlac">
+                <div class="lienlac">
+                    <a href="https://www.facebook.com/share/1US5n1N4NK/?mibextid=wwXIfr" class="the" target="_blank">
+                        <img src="/logo/logo.png" width="20">
+                        Mặt trận Phường Hà Tu, Quảng Ninh
+                    </a>
+                </div>
+                <div class="lienlac">
+                    <a href="https://www.facebook.com/share/17qTMPZnwN/?mibextid=wwXIfr" class="the" target="_blank">
+                        <img src="/logo/Đoàn phường.jpg" width="20">
+                        Đoàn Phường Hà Tu
+                    </a>
+                </div>
+                <div class="lienlac">
+                    <a href="https://www.facebook.com/share/1GU6FNPgi8/?mibextid=wwXIfr" class="the" target="_blank">
+                        <img src="/logo/4.0.jpg" width="20">
+                        Hà Tu 4.0
+                    </a>
+                </div>
+                <div class="lienlac">
+                    <a href="https://phuonghatu.vn/" class="the" target="_blank">
+                        <img src="/logo/Quốc huy.png" width="20">
+                        Trang thông tin điện tử phường Hà Tu
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id = "in4">
+            <div id = "ThongtinF">
+                <h2>Giới thiệu phường Hà Tu</h2>
+                <a href="https://tinhthanhvn.com/bando/quang-ninh/phuong-ha-tu">
+                    Thông tin địa lý phường Hà Tu
+                </a>
+                <a href="https://baoquangninh.vn/phuong-ha-tu-vung-buoc-tren-hanh-trinh-phat-trien-3366046.html">
+                    Phường Hà Tu vững bước trên hành trình phát triển
+                </a>
+                <a href="https://baoquangninh.vn/phuong-ha-tu-xay-dung-chinh-quyen-kien-tao-vi-dan-phat-trien-ben-vung-3391825.html">
+                    Phường Hà Tu: Xây dựng chính quyền kiến tạo, vì dân
+                </a>
+                <a href="https://baoquangninh.vn/xay-dung-ha-tu-la-phuong-kieu-mau-giau-dep-van-minh-nghia-tinh-3369633.html">
+                    Xây dựng Hà Tu thành phường kiểu mẫu, giàu đẹp, văn minh, nghĩa tình
+                </a>         
+            </div>
+            <img src="/logo/Bando.png">   
+        </div>
+        
+    </footer>
+    <div id = "last">Bản quyền © 2026 | Mặt trận Tổ Quốc phường Hà Tu</div>
+    <script src="script.js"></script>
+</body>
+</html>
