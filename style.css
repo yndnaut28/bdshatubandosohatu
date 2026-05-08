@@ -91,6 +91,7 @@ header {
     border-radius: 8px;
     font-size: 1em;
     outline: none;
+    box-sizing: border-box;
 }
 .search-bar input {
     flex: 1;
@@ -116,6 +117,7 @@ input:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
 }
 .custom-select .selected::after {
     content: "▼";
@@ -161,11 +163,13 @@ input:focus {
 
 /* CARD ===============================================================================*/
 .card-container {
-    display: flex;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: 25px;
     padding: 20px;
-    flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center; 
+    max-width: 1340px;
+    margin: 0 auto;
 }
 .card {
     background: #ffffff;
@@ -664,6 +668,17 @@ footer .lienlac a:hover { color: #ffd700; }
     #logo { margin-right: 10px; }
     #nametag p { font-size: 8px; font-weight: 600; }
     #nametag h1 { font-size: 16px; }
+
+    .card-container { 
+        grid-template-columns: 1fr;
+        padding: 10px; 
+    }
+    .card {
+        width: 95%;
+        max-width: 340px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     .search-bar {
         margin: 10px auto;
