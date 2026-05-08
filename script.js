@@ -145,3 +145,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
   filterCards();
 });
+let ytPlayer;
+
+// Hàm này được YouTube API tự động gọi khi script API tải xong
+function onYouTubeIframeAPIReady() {
+    ytPlayer = new YT.Player('yt-video', {
+        events: {
+            'onReady': onPlayerReady
+        }
+    });
+}
+
+function onPlayerReady(event) {
+    const muteBtn = document.getElementById('custom-mute-btn');
+    const muteIcon = document.getElementById('mute-icon');
+
+    event.target.mute();
+
+    muteBtn.addEventListener('click', () => {
+        if (ytPlayer.isMuted()) {
+            ytPlayer.unMute();
+            ytPlayer.setVolume(100);
+            muteIcon.textContent = '🔊';
+        } else {
+            ytPlayer.mute();
+            muteIcon.textContent = '🔇';
+        }
+    });
+}
