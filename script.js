@@ -147,29 +147,25 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 let ytPlayer;
 
-// Hàm này được YouTube API tự động gọi khi script API tải xong
-function onYouTubeIframeAPIReady() {
-    ytPlayer = new YT.Player('yt-video', {
-        events: {
-            'onReady': onPlayerReady
-        }
-    });
-}
-
-function onPlayerReady(event) {
+window.addEventListener('load', () => {
     const muteBtn = document.getElementById('custom-mute-btn');
     const muteIcon = document.getElementById('mute-icon');
-
-    event.target.mute();
+    const ytIframe = document.getElementById('yt-video');
+    
+    // Mặc định video đang bị tắt tiếng do thuộc tính autoplay
+    let isMuted = true; 
 
     muteBtn.addEventListener('click', () => {
-        if (ytPlayer.isMuted()) {
-            ytPlayer.unMute();
-            ytPlayer.setVolume(100);
+        if (isMuted) {
+            ytIframe.contentWindow.postMessage('{"event":"command","func":"unMute","args":""}', '*');
+            ytIframe.contentWindow.postMessage('{"event":"command","func":"setVolume","args":[100]}', '*');
             muteIcon.textContent = '🔊';
+            isMuted = false;
         } else {
-            ytPlayer.mute();
+            // Bắn lệnh mute
+            ytIframe.contentWindow.postMessage('{"event":"command","func":"mute","args":""}', '*');
             muteIcon.textContent = '🔇';
+            isMuted = true;
         }
     });
-}
+});
