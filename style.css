@@ -225,7 +225,8 @@ input:focus {
     border-radius: 10px 10px 0 0;
 }
 .card-img img,
-.card-img video {
+.card-img video,
+.card-img iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -237,12 +238,27 @@ input:focus {
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
+.card-img iframe {
+    pointer-events: none; 
+}
 .card-img img.active,
 .card-img video.active,
+.card-img iframe.active,
 .card-img img:only-child,
-.card-img video:only-child {
+.card-img video:only-child,
+.card-img iframe:only-child {
     opacity: 1;
     z-index: 3;
+}
+
+#iframeFull {
+    width: 85vw !important;
+    height: 48vw !important;
+    max-width: 1000px !important;
+    max-height: 562px !important; 
+    border: 3px solid #fff;
+    border-radius: 10px;
+    background-color: #000;
 }
 
 /* Dot indicator for slideshow */
