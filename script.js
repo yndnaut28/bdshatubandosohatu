@@ -63,15 +63,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!customSelect.contains(e.target)) customSelect.classList.remove("active");
   });
 
-// === Slideshow & Dot Indicators (Lỗi 5.2) ===
+// === Slideshow & Dot Indicators ===
   const cardImagesContainers = document.querySelectorAll('.card-img');
-  
+
   cardImagesContainers.forEach(container => {
-      // Lấy cả thẻ img và video
-      const mediaElements = container.querySelectorAll('img, video');
+      // Chỉ tìm img và video cục bộ (Không dùng iframe ở ngoài Card nữa)
+      const mediaElements = container.querySelectorAll('img, video'); 
       if (mediaElements.length <= 1) return;
 
-      // Tạo dots
       const dotsDiv = document.createElement('div');
       dotsDiv.className = 'dot-indicator';
       mediaElements.forEach((_, i) => {
@@ -86,84 +85,80 @@ document.addEventListener("DOMContentLoaded", () => {
       let slideTimer;
 
       function playNext() {
-          // Xóa class active của phần tử hiện tại
-          mediaElements[currentIdx].classList.remove('active');
+          const currentMedia = mediaElements[currentIdx];
+          currentMedia.classList.remove('active');
           dots[currentIdx].classList.remove('active');
-          
-          // Nếu phần tử hiện tại là video, hãy tạm dừng và tua lại từ đầu
-          if (mediaElements[currentIdx].tagName.toLowerCase() === 'video') {
-              mediaElements[currentIdx].pause();
-              mediaElements[currentIdx].currentTime = 0;
+
+          if (currentMedia.tagName.toLowerCase() === 'video') {
+              currentMedia.pause();
+              currentMedia.currentTime = 0;
           }
 
-          // Chuyển sang phần tử tiếp theo
           currentIdx = (currentIdx + 1) % mediaElements.length;
-          
-          // Thêm class active cho phần tử mới
+
           const nextMedia = mediaElements[currentIdx];
           nextMedia.classList.add('active');
           dots[currentIdx].classList.add('active');
 
-          // Đặt lịch chuyển slide tiếp theo
           scheduleNext(nextMedia);
       }
 
       function scheduleNext(media) {
           clearTimeout(slideTimer);
-          
+
           if (media.tagName.toLowerCase() === 'video') {
-              // Bắt đầu phát video
               const playPromise = media.play();
               if (playPromise !== undefined) {
-                  playPromise.catch(error => {
-                      // Nếu trình duyệt chặn Autoplay, tự động bỏ qua sau 3 giây
-                      slideTimer = setTimeout(playNext, 3000);
-                  });
+                  playPromise.catch(() => slideTimer = setTimeout(playNext, 3000));
               }
-              // Lắng nghe sự kiện video kết thúc thì chuyển slide (chỉ gọi 1 lần)
               media.addEventListener('ended', playNext, { once: true });
           } else {
-              // Nếu là ảnh, tự động chuyển sau 3 giây
-              slideTimer = setTimeout(playNext, 3000);
+              // Ảnh thường và ảnh bìa Youtube đều trượt sau 3 giây
+              slideTimer = setTimeout(playNext, 3000); 
           }
       }
 
-      // Kích hoạt logic đếm ngược/chờ cho phần tử đầu tiên ngay khi tải
       scheduleNext(mediaElements[0]);
   });
 
-// === Modal Logic & Keyboard Support (Hỗ trợ Ảnh & Video) ===
-  let currentMediaList = []; // Chuyển từ danh sách ảnh thành danh sách media tổng hợp
+  // === Modal Logic & Keyboard Support ===
+  let currentMediaList = [];
   let currentIdx = 0;
   let currentTitle = "";
+
   const modal = document.getElementById("imageModal");
   const modalImg = document.getElementById("imgFull");
-  const modalVideo = document.getElementById("videoFull"); // Lấy thêm phần tử video của modal
+  const modalVideo = document.getElementById("videoFull");
+  const modalIframe = document.getElementById("iframeFull");
   const captionText = document.getElementById("caption");
 
   function updateModal() {
       const currentMedia = currentMediaList[currentIdx];
-      
-      // Mỗi lần chuyển slide trong modal, tạm dừng video hiện tại (nếu có) và tua về đầu
-      modalVideo.pause();
-      modalVideo.currentTime = 0;
+
+      if (modalVideo) { modalVideo.pause(); modalVideo.currentTime = 0; }
+      if (modalIframe) { modalIframe.src = ""; }
+
+      modalImg.style.display = "none";
+      modalVideo.style.display = "none";
+      modalIframe.style.display = "none";
 
       if (currentMedia.type === 'video') {
-          // Ẩn ảnh, hiện video
-          modalImg.style.display = "none";
           modalVideo.style.display = "block";
           modalVideo.src = currentMedia.src;
-          
-          // Tự động phát video trong modal
-          modalVideo.play().catch(err => console.log("Autoplay trong modal bị chặn hoặc lỗi"));
+          modalVideo.play().catch(e => console.log(e));
+      } else if (currentMedia.type === 'youtube') {
+          // Bật chế độ YouTube to rõ ràng khi xem chi tiết
+          modalIframe.style.display = "block";
+          let url = new URL(currentMedia.src);
+          url.searchParams.set('autoplay', '1');
+          url.searchParams.set('controls', '1');
+          url.searchParams.set('playsinline', '1');
+          modalIframe.src = url.toString();
       } else {
-          // Ẩn video, hiện ảnh
-          modalVideo.style.display = "none";
           modalImg.style.display = "block";
           modalImg.src = currentMedia.src;
       }
 
-      // Cập nhật lại thanh tiêu đề đếm số lượng
       captionText.innerText = currentTitle + " (" + (currentIdx + 1) + "/" + currentMediaList.length + ")";
   }
 
@@ -171,18 +166,17 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.addEventListener("click", function() {
           const card = this.closest(".card");
           currentTitle = card.querySelector("h3").textContent;
-          
-          // Lấy tất cả phần tử img và video nằm bên trong .card-img của card này
+
           const allMedia = card.querySelectorAll(".card-img img, .card-img video");
-          
-          // Tạo mảng đối tượng lưu thông tin loại thẻ (tag) và đường dẫn (src)
+
           currentMediaList = Array.from(allMedia).map(media => {
-              return {
-                  type: media.tagName.toLowerCase(),
-                  src: media.src
-              };
+              // Nhận diện ảnh nào là YouTube thì chuyển vào Modal dạng iframe
+              if (media.tagName.toLowerCase() === 'img' && media.hasAttribute('data-youtube')) {
+                  return { type: 'youtube', src: media.getAttribute('data-youtube') };
+              }
+              return { type: media.tagName.toLowerCase(), src: media.src };
           });
-          
+
           currentIdx = 0;
           modal.style.display = "flex";
           updateModal();
@@ -203,18 +197,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const closeModal = () => {
       modal.style.display = "none";
-      modalVideo.pause(); // Dừng video ngay lập tức khi tắt modal
-      modalVideo.src = ""; // Giải phóng tài nguyên video ngầm
+      if (modalVideo) { modalVideo.pause(); modalVideo.src = ""; }
+      if (modalIframe) modalIframe.src = "";
   };
 
   document.querySelector(".close-modal").onclick = closeModal;
 
-  // Đóng khi click ra vùng nền đen bên ngoài bản xem chi tiết
   modal.addEventListener("click", (e) => {
       if (e.target === modal) closeModal();
   });
 
-  // Hỗ trợ các phím điều hướng mũi tên & ESC tắt modal nhanh
   document.addEventListener("keydown", (e) => {
       if (modal.style.display === "flex") {
           if (e.key === "ArrowRight") document.querySelector(".modal-next").click();
