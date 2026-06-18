@@ -224,7 +224,8 @@ input:focus {
     overflow: hidden;
     border-radius: 10px 10px 0 0;
 }
-.card-img img {
+.card-img img,
+.card-img video {
     position: absolute;
     top: 0;
     left: 0;
@@ -237,7 +238,9 @@ input:focus {
     transition: opacity 1s ease-in-out;
 }
 .card-img img.active,
-.card-img img:only-child {
+.card-img video.active,
+.card-img img:only-child,
+.card-img video:only-child {
     opacity: 1;
     z-index: 3;
 }
